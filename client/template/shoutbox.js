@@ -1,3 +1,4 @@
+
 Template.shoutbox.helpers({
   shout: function(){
     var shoutCursor =  Shouts.find({}, {sort: {createdAt: 1}});

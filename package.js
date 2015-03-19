@@ -9,31 +9,24 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0.4.1');
   var both = ['client', 'server'];
 
   api.use([
+      'session',
       'templating',
+      'momentjs:moment',
       'mrt:jquery-ui',
       'sacha:spin',
       'twbs:bootstrap',
       'mongo',
-      'iron:router'
-  ], both);
+      'livedata'
+  ]);
 
-  api.add_files([
-    'client/template/styles/shoutbox.css',
-    'client/template/shoutbox.html',
-    'client/template/shoutbox.js'
-  ], 'client');
-
-  api.add_files([
-    'lib/router.js',
-    'lib/collections/shouts.js'
-  ], both);
-
-
-  api.add_files([
-    'server/publications.js',
-  ], both);
+  api.add_files('client/template/styles/subscriptions.js', 'client');
+  api.add_files('client/template/shoutbox.html','client');
+  api.add_files('lib/collections/shouts.js', both);
+  api.add_files('server/publications.js', 'server');
+  api.add_files('server/fixtures.js', 'server');
+  api.add_files('client/template/shoutbox.js', 'client');
+  api.add_files('client/template/styles/shoutbox.css', 'client');
 });

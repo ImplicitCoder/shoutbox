@@ -1,28 +1,4 @@
 
-/* CSS declarations go here */
-body {
-  font-family: sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
-  background-attachment: fixed;
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.weatherbox{
-  margin-top: 2em;
-  color: darkgrey;
-}
-div#map{
-  position: relative;
-  width: 90%;
-  height: 30em;
-  margin: 0 auto;
-}
 .shoutbox .title {
   text-align: center;
   margin: 1em 0;
@@ -45,32 +21,13 @@ div#map{
   color: darkgray;
 }
 .name{
-  color: #66FF33;
+  color: blue;
 }
-.map{
-  margin-top: 10em;
-}
+
 .new-shout{
   padding: 1em;
   margin: 0 auto;
   width: 70%;
 }
 
-.LocationInput{
-  margin: 2em;
-}
-.modal-content{
-  list-style-type: none;
-  padding:0 2em 2em 2em;
-  line-height: 2em;
-}
-.modal-header{
-}
-.getForecast{
-  font-size: 0.7em;
-  color: black;
-  padding: 0.1em;
-}
-.button_text{
-  margin: 0.3em;
-}
+
