@@ -13,6 +13,7 @@ Package.onUse(function(api) {
   var both = ['client', 'server'];
 
   api.use([
+      'templating',
       'mrt:jquery-ui',
       'sacha:spin',
       'twbs:bootstrap',
@@ -21,18 +22,18 @@ Package.onUse(function(api) {
   ], both);
 
   api.add_files([
-    'lib/router.js',
-    'lib/collections/shouts.js'
-  ], both);
-
-  api.add_files([
     'client/template/styles/shoutbox.css',
     'client/template/shoutbox.html',
     'client/template/shoutbox.js'
   ], 'client');
 
+  api.add_files([
+    'lib/router.js',
+    'lib/collections/shouts.js'
+  ], both);
+
 
   api.add_files([
     'server/publications.js',
-  ], 'server');
+  ], both);
 });
