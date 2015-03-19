@@ -1,0 +1,26 @@
+<template name="shoutbox">
+<div class="shoutbox">
+  <h1 class="title">Shoutbox!</h1>
+
+  <div id="shoutContent" class="content">
+  {{#unless shout}}<li>{{>spinner}}</li>{{/unless}}
+
+  {{#each shout}}
+
+    <li>
+        <span class="name">{{name}}</span> says: {{text}}
+        <div class="submitted">{{createdAt}}</div>
+      </li>
+    <hr class="divider"/>
+
+    {{scrollDown}}
+  {{/each}}
+  </div>
+
+  <form class="new-shout">
+    <input type="text" name="name" placeholder="Your name" style="width: 8em"/>
+    <input type="text" name="text" placeholder="Your message ..." style="width:60%"/>
+    <input type="submit" value="Shout!">
+  </form>
+</div>
+</template>
