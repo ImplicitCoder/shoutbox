@@ -21,6 +21,7 @@ Package.onUse(function(api) {
       'mongo',
       'livedata'
   ]);
+  api.export('Shouts', ['server', 'client']);
  api.versionsFrom('METEOR@1.0.4.1');
   api.add_files('client/template/styles/subscriptions.js', 'client');
   api.add_files('client/template/shoutbox.html','client');
@@ -29,4 +30,9 @@ Package.onUse(function(api) {
   api.add_files('server/fixtures.js', 'server');
   api.add_files('client/template/shoutbox.js', 'client');
   api.add_files('client/template/styles/shoutbox.css', 'client');
+});
+
+Package.on_test(function(api) {
+  api.use(["baze:shoutbox", "tinytest", "test-helpers"]);
+  api.add_files("shoutbox-tests.js", ["client", "server"]);
 });
