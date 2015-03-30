@@ -1,6 +1,6 @@
 Package.describe({
   name: 'baze:shoutbox',
-  version: '0.0.1',
+  version: '0.0.2',
   summary: 'Reactive shoutbox without login, auto scroll-down.',
   git: 'https://github.com/debaze/shoutbox.git',
   // By default, Meteor will default to using README.md for documentation.
