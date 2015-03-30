@@ -23,7 +23,7 @@ Package.onUse(function(api) {
   ]);
   api.export('Shouts', ['server', 'client']);
  api.versionsFrom('METEOR@1.0.4.1');
-  api.add_files('client/template/styles/subscriptions.js', 'client');
+  api.add_files('client/subscriptions.js', 'client');
   api.add_files('client/template/shoutbox.html','client');
   api.add_files('lib/collections/shouts.js', both);
   api.add_files('server/publications.js', 'server');
