@@ -22,16 +22,39 @@
 .name{
   color: blue;
 }
-
 .new-shout{
   padding: 1em;
   margin: 0 auto;
   width: 70%;
 }
-
-input[name="name"]{
+#name-field{
   width: 8em;
 }
-input[name="text"]{
+#text-field{
   width:60%;
+}
+
+#text-field.red:-moz-placeholder{
+  color:red;
+}
+#name-field.red:-moz-placeholder{
+  color:red;
+}
+#text-field.red::-moz-placeholder{
+  color:red;
+}
+#name-field.red::-moz-placeholder{
+  color:red;
+}
+#text-field.red::-webkit-input-placeholder{
+  color:red;
+}
+#name-field.red::-webkit-input-placeholder{
+  color:red;
+}
+#text-field.red::-ms-input-placeholder{
+  color:red;
+}
+#name-field.red::-ms-input-placeholder{
+  color:red;
 }
