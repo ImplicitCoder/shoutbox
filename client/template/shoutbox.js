@@ -1,3 +1,7 @@
+var scrollDown = function(){
+  var content = document.getElementById('shoutContent');
+  content.scrollTop = content.scrollHeight;
+};
 
 Template.shoutbox.helpers({
   shout: function(){
@@ -10,18 +14,10 @@ Template.shoutbox.helpers({
         _i++;
     });
     return shoutObj;
-    },
-
-    scrollDown: function(){     //Scrolldown to last shout
-    Meteor.defer(function (){   //Wait until DOM is populated
-      var content = document.getElementById('shoutContent');
-      content.scrollTop = content.scrollHeight;
-    });
- }
+    }
 });
 
 Template.shoutbox.events({
-
 'submit .new-shout' : function(event){
       var text = event.target.text.value;
       var name = event.target.name.value;
@@ -31,5 +27,14 @@ Template.shoutbox.events({
       content.scrollTop = content.scrollHeight;
       return false;
       }
-
 });
+
+Template.shoutbox.rendered = function(){
+  scrollDown();                             //scroll down after shouts are rendered in DOM
+  this.find('#shoutContent')._uihooks = {
+    insertElement: function (node, next){   //insert new shout and scroll down
+      $(node).insertBefore(next);
+      scrollDown();
+    }
+  }
+};
