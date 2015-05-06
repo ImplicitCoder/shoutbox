@@ -14,6 +14,18 @@
   float: center;
   clear: both;
    }
+.animate {
+    -webkit-animation: fade 600ms;
+    animation: fade 600ms;
+    opacity: 1;
+ }
+@-webkit-keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
 .submitted{
   text-align: right;
   font-size: 0.85em;
